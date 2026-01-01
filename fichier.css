@@ -1,3 +1,32 @@
 body{
     background-color: orange;
 }
+
+
+
+.hero-section {
+    height: 70vh; /* plein écran */
+    background-image: url("./photos/photo1.png"); /* mets le chemin de ton image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Overlay sombre pour le texte */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
