@@ -30,3 +30,40 @@ body{
     z-index: 2;
 }
 
+
+
+
+/* Couleur de la navbar */
+.custom-navbar {
+    background-color: #000; /* noir (change si tu veux) */
+}
+
+/* Couleur des liens */
+.custom-navbar .nav-link {
+    color: #fff !important; /* blanc */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover des liens */
+.custom-navbar .nav-link:hover {
+    color: orange !important;
+}
+
+/* Lien actif */
+.custom-navbar .nav-link.active {
+    color: orange !important;
+}
+
+
+/* Bouton hero */
+.btn-hero {
+    transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+}
+
