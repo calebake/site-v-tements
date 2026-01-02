@@ -7,7 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
   
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
             <link rel="stylesheet" href="./fichier.css">
 </head>
 <body>    
@@ -54,7 +55,44 @@
        </a>
 
       </div>
-       </section>
+</section>
+
+
+<section class="container py-5">
+  <!-- TEXTE -->
+  <div class="text-center mb-5 reveal">
+    <h2 class="fw-bold">Nos Produits</h2>
+    <p class="text-muted">Des vêtements modernes et de qualité</p>
+  </div>
+
+  <!-- CARTES -->
+  <div class="row g-4">
+    <div class="col-md-4 reveal delay-1">
+      <div class="card text-center p-4 shadow h-100">
+        <i class="bi bi-shoe-print icon"></i>
+        <h5 class="mt-3">Chaussures</h5>
+        <p class="text-muted">Confort et élégance</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 reveal delay-2">
+      <div class="card text-center p-4 shadow h-100">
+      <i class="fa-regular fa-shirt"></i>
+        <h5 class="mt-3">T-Shirts</h5>
+        <p class="text-muted">Style et simplicité</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 reveal delay-3">
+      <div class="card text-center p-4 shadow h-100">
+        <i class="bi bi-bag icon"></i>
+        <h5 class="mt-3">Jeans</h5>
+        <p class="text-muted">Résistant et tendance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
@@ -110,5 +148,23 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+
+    <script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+
 </body>
 </html>
