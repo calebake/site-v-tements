@@ -14,41 +14,44 @@
 </head>
 <body>    
     <header>
-    <!-- <nav class="navbar navbar-expand-lg  custom-navbar navbar-light bg-light shadow-sm"> -->
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="">BOUTIQUE </a>
 
-          <nav class="navbar navbar-expand-lg custom-navbar navbar-dark bg-dark shadow-sm"> 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="./liens/boutique.html">Boutique</a></li>
+        <li class="nav-item"><a class="nav-link" href="./liens/contacts.html">Contact</a></li>
+         <li class="nav-item"><a class="nav-link" href="./liens/A propos .html">A propos</a></li>
+      </ul>
+
+      <!-- PANIER -->
+      <a href="panier.html" class="btn btn-outline-light position-relative">
+        🛒 Panier
+        <span id="cart-count"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- <button class="btn btn-primary"
+        onclick="addToCart('Chaussures', 50)">
+  Ajouter au panier
+</button> -->
 
 
-        <div class="container">
-            <!-- Logo / Nom du site -->
-            <a class="navbar-brand fw-bold" href="#">Ma Boutique</a>
 
-            <!-- Bouton menu mobile -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <!-- Liens -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./liens/boutique.html">Boutique</a>
-                        
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./liens/contacts.html">Contacts</a>
-                    </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="./liens/A propos .html">A propos </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 </header>
 
 
@@ -209,6 +212,7 @@
 </footer>
 
 
+<script src="./liens/cart.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

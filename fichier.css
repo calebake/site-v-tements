@@ -31,29 +31,54 @@ body{
 }
 
 
-
-
-/* Couleur de la navbar */
-.custom-navbar {
-    background-color: #000; /* noir (change si tu veux) */
+/* Couleur des liens du menu */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-/* Couleur des liens */
-.custom-navbar .nav-link {
-    color: #fff !important; /* blanc */
-    font-weight: 500;
-    transition: color 0.3s ease;
+/* AU SURVOL DE LA SOURIS */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffc107;        /* jaune Bootstrap */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
 }
 
-/* Hover des liens */
-.custom-navbar .nav-link:hover {
-    color: orange !important;
+.navbar-nav .nav-link.active {
+  color: #ffc107 !important;
+  font-weight: bold;
 }
 
-/* Lien actif */
-.custom-navbar .nav-link.active {
-    color: orange !important;
+
+
+
+
+
+
+.navbar-nav .nav-link {
+  position: relative;
 }
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #ffc107;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+
+
+
 
 
 
