@@ -1,0 +1,28 @@
+
+body {
+            background: linear-gradient(135deg, #eee456, #e67946);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .form-card {
+            background: #f1ecce;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(199, 107, 20, 0.15);
+        }
+
+    
+    .btn-orange {
+        background-color: #eec5a3; /* orange Bootstrap */
+        border-color: #fd7e14;
+        color: #161414;
+    }
+
+    .btn-orange:hover {
+        background-color: #e96b0c;
+        border-color: #0e0b09;
+        color: #fff;
+    }
+
