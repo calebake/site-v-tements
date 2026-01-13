@@ -46,15 +46,10 @@ body{
 }
 
 .navbar-nav .nav-link.active {
+  /* souligner  */
   color: #ffc107 !important;
   font-weight: bold;
 }
-
-
-
-
-
-
 
 .navbar-nav .nav-link {
   position: relative;
