@@ -32,5 +32,24 @@ fetch("/navbar.html")
   });
 </script>
 
+<script>
+fetch("/navbar.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("navbar").innerHTML = html;
+
+    // ACTIVER LE LIEN DE LA PAGE COURANTE
+    const currentPage = window.location.pathname;
+    const links = document.querySelectorAll(".nav-item-link");
+
+    links.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>

@@ -35,3 +35,8 @@
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
+
+.nav-link.active {
+    color: #fd7e14 !important;
+    font-weight: bold;
+}
