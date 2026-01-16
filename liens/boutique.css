@@ -1,0 +1,90 @@
+body{
+background-color: #af6121;
+}
+
+
+/* HERO */
+.shop-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(247, 146, 52, 0.6), rgba(26, 25, 25, 0.6)),
+  url("https://images.unsplash.com/photo-1520975916090-3105956dac38");
+  background-size: cover;
+  background-position: center;
+}
+
+/* BOUTONS */
+.btn-orange {
+  background-color:white;
+  color: rgb(24, 23, 23);
+  border: black;
+}
+.btn-orange:hover {
+  background-color: #f7a308;
+}
+
+/* PRODUITS */
+.product-card img {
+  height: 220px;
+  object-fit: cover;
+}
+.product-card {
+  border: none;
+  box-shadow: 0 5px 15px rgba(99, 2, 2, 0.1);
+  transition: .3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+}
+.price {
+  color: #fd7e14;
+  font-weight: bold;
+}
+
+/* PROMOS */
+.promo-card {
+  padding: 40px;
+  border-radius: 12px;
+}
+.promo-left {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+  url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f");
+  background-size: cover;
+  color: white;
+}
+.promo-right {
+  background: #f8f9fa;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+}
+
+
+custom-select-color {
+  background-color: #e9e3d0; 
+  color: #be8a19; /* texte foncé */
+  border: 1px solid #f3980e;
+}
+
+/* Couleur des inputs */
+.custom-input-color {
+  background-color: rgb(248, 244, 244); 
+  color: #f3efea; 
+  border: 1px solid #0c0c0c;
+}
+
+/* Couleur du bouton */
+.custom-btn-color {
+  background-color: #f8f4ee; 
+  color: rgb(17, 16, 16);
+  border:black;
+}
+
+.custom-btn-color:hover {
+  background-color: #fb8c00; /* orange plus foncé au survol */
+  color: white;
+  border: rgb(14, 13, 13);
+}
+
