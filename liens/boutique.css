@@ -89,8 +89,8 @@ custom-select-color {
 }
 
 .product-card.selected {
-  border: 2px solid orange;
-  background-color: #fff3e0;
+  border: 2px solid rgb(19, 19, 19);
+  background-color: #d6c05e;
 }
 
 
