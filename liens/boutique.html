@@ -30,22 +30,26 @@
 <section class="container my-5">
   <div class="row g-3 align-items-center">
     <div class="col-md-3">
-      <select class="form-select custom-select-color">
+      <select id="category" class="form-select custom-select-color">
         <option>Catégories</option>
-        <option>T-shirts</option>
-        <option>Chaussures</option>
-        <option>Vestes</option>
+        <option value="T-shirts">T-shirts</option>
+        <option value="Chaussures">Chaussures</option>
+        <option value="Vestes">Vestes</option>
       </select>
     </div>
     <div class="col-md-2">
-      <input type="number" class="form-control custom-input-color" placeholder="Min">
+      <input type="number" id="minPrice" class="form-control custom-input-color" placeholder="Min">
     </div>
     <div class="col-md-2">
-      <input type="number" class="form-control custom-input-color" placeholder="Max">
+      <input type="number" id="maxPrice"  class="form-control custom-input-color" placeholder="Max">
     </div>
     <div class="col-md-2">
-      <button class="btn custom-btn-color w-100">Filtrer</button>
+      <button  id="filterBtn" class="btn custom-btn-color w-100">Filtrer</button>
     </div>
+  </div> 
+
+  <div class="row mt-4" id="productList">
+    <!-- Les produits filtrés apparaîtront ici -->
   </div>
 </section>
 
@@ -165,6 +169,91 @@ fetch("/navbar.html")
     });
   });
 </script>
+
+
+
+<script>
+  // Données produits
+  const products = [
+    { name: "T-shirt Rouge", category: "T-shirts", price: 20 },
+    { name: "T-shirt Bleu", category: "T-shirts", price: 25 },
+    { name: "Chaussures Noires", category: "Chaussures", price: 50 },
+    { name: "Chaussures Blanches", category: "Chaussures", price: 60 },
+    { name: "Veste en jean", category: "Vestes", price: 80 }
+  ];
+
+  // Panier
+  const cart = [];
+
+  const productList = document.getElementById("productList");
+  const filterBtn = document.getElementById("filterBtn");
+
+  // Affichage des produits
+  function displayProducts(list) {
+    productList.innerHTML = "";
+
+    if (list.length === 0) {
+      productList.innerHTML = "<p>Aucun produit trouvé</p>";
+      return;
+    }
+
+    list.forEach(product => {
+      const div = document.createElement("div");
+      div.className = "col-md-3 mb-3";
+
+      div.innerHTML = `
+        <div class="card product-card" style="cursor:pointer;">
+          <div class="card-body">
+            <h5>${product.name}</h5>
+            <p>Catégorie : ${product.category}</p>
+            <p>Prix : ${product.price} FCFA</p>
+          </div>
+        </div>
+      `;
+
+      const card = div.querySelector(".product-card");
+
+      // UN SEUL CLICK
+      card.addEventListener("click", () => {
+
+        // Effet visuel sélection
+        document.querySelectorAll(".product-card")
+          .forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+
+        // Ajouter au panier
+        cart.push(product);
+
+        alert(`${product.name} ajouté au panier !`);
+        console.log("Panier :", cart);
+      });
+
+      productList.appendChild(div);
+    });
+  }
+
+  // Affichage initial
+  displayProducts(products);
+
+  // Filtrage
+  filterBtn.addEventListener("click", () => {
+    const category = document.getElementById("category").value;
+    const minPrice = parseFloat(document.getElementById("minPrice").value) || 0;
+    const maxPrice = parseFloat(document.getElementById("maxPrice").value) || Infinity;
+
+    const filteredProducts = products.filter(product => {
+      return (
+        (!category || product.category === category) &&
+        product.price >= minPrice &&
+        product.price <= maxPrice
+      );
+    });
+
+    displayProducts(filteredProducts);
+  });
+</script>
+
+
 
 
 </body>

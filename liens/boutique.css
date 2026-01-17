@@ -79,7 +79,7 @@ custom-select-color {
 .custom-btn-color {
   background-color: #f8f4ee; 
   color: rgb(17, 16, 16);
-  border:black;
+ border: #0c0c0c;
 }
 
 .custom-btn-color:hover {
@@ -87,4 +87,10 @@ custom-select-color {
   color: white;
   border: rgb(14, 13, 13);
 }
+
+.product-card.selected {
+  border: 2px solid orange;
+  background-color: #fff3e0;
+}
+
 
